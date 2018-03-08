@@ -1,0 +1,74 @@
+/* ue-scroll.css */
+
+:root {
+  --color-black: #000;
+  --color-gray: #999;
+  --color-white: #fff;
+  --effect-shadow: rgba(0, 0, 0, 0.2);
+  --btn-width: 50px;
+  --btn-height: 50px;
+  --btn-cursor: pointer;
+  --btn-position-top: auto;
+  --btn-position-right: 20px;
+  --btn-position-bottom: 20px;
+  --btn-position-left: auto;
+  --btn-z-index: 100;
+  --arrow-black-img: '../img/arrow-black.png';
+  --arrow-white-img: '../img/arrow-white.png';
+  --arrow-size: 40%;
+  --arrow-repeat: no-repeat;
+  --arrow-position: center;
+}
+
+.ue-scroll {
+  display: none;
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  cursor: var(--btn-cursor);
+  top: var(--btn-position-top);
+  right: var(--btn-position-right);
+  bottom: var(--btn-position-bottom);
+  left: var(--btn-position-left);
+  z-index: var(--btn-z-index);
+  width: var(--btn-width);
+  height: var(--btn-height);
+  background-size: var(--arrow-size);
+  background-repeat: var(--arrow-repeat);
+  background-position: var(--arrow-position);
+  &.btn-black {
+    background-color: var(--color-black);
+  }
+  &.btn-gray {
+    background-color: var(--color-gray);
+  }
+  &.btn-white {
+    background-color: var(--color-white);
+  }
+  &.border-black {
+    border: 1px solid var(--color-black);
+  }
+  &.border-white {
+    border: 1px solid var(--color-white);
+  }
+  &.border-gray {
+    border: 1px solid var(--color-gray);
+  }
+  &.arrow-black {
+    background-image: url(var(--arrow-black-img));
+  }
+  &.arrow-white {
+    background-image: url(var(--arrow-white-img));
+  }
+  &.shadow {
+    box-shadow: 0 0 10px var(--effect-shadow);
+  }
+  &.circle {
+    border-radius: 50%;
+  }
+  &.rounded-rectangle {
+    border-radius: 20%;
+  }
+  &.square {
+    border-radius: 0%;
+  }
+}
