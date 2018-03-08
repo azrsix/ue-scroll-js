@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ue-scroll.js | Lightweight JavaScript library for scroll up</title>
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" href="favicon/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon-152x152.png" sizes="152x152">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:200,300,400|Source+Code+Pro">
+  <link rel="stylesheet" href="//unpkg.com/ue-scroll-js@latest/dist/ue-scroll.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="//unpkg.com/ue-scroll-js"></script>
+</head>
+
+<body>
+  <header class="top">
+    <nav>
+      <ul class="navigation flex row">
+        <li><a href="./">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="https://github.com/azrsix/ue-scroll-js" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="page">
+      <div class="column center">
+        <h1 class="title">ue-scroll.js</h1>
+        <h2 class="sub-title">Lightweight JavaScript library for scroll up</h2>
+        <pre><code>$ npm i ue-scroll-js -P</code></pre>
+        <div class="start flex responsive">
+          <a href="docs.html#getting-started" class="btn grid-50">Getting started</a>
+          <a href="docs.html#examples" class="btn grid-50">Examples</a>
+        </div>
+        <div class="description step1">Have a try scroll down this page!</div>
+        <span class="try step1"></span>
+      </div>
+    </div>
+    <div class="page">
+      <div class="column center"></div>
+    </div>
+    <div class="page">
+      <div class="column center">
+        <div class="description step2">Try to click or tap the button at the bottom right.</div>
+        <span class="try step2"></span>
+      </div>
+    </div>
+  </main>
+  <footer class="footer flex responsive center">
+    <div class="license">Released under the MIT License</div>
+    <div class="copyright">Copyright &copy; 2018 azrsix</div>
+  </footer>
+  <div id="ue-scroll" class="ue-scroll btn-white arrow-black circle shadow"></div>
+  <script>
+    UeScroll.init();
+    UeScroll.init({
+      element: '.try.step2'
+    });
+  </script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

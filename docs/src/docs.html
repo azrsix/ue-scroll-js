@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ue-scroll.js | Lightweight JavaScript library for scroll up</title>
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" href="favicon/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon-152x152.png" sizes="152x152">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:200,300,400|Source+Code+Pro">
+  <link rel="stylesheet" href="//unpkg.com/ue-scroll-js@latest/dist/ue-scroll.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="//unpkg.com/ue-scroll-js"></script>
+</head>
+
+<body>
+  <header class="top">
+    <nav>
+      <ul class="navigation flex row">
+        <li><a href="./">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="https://github.com/azrsix/ue-scroll-js" target="_blank">GitHub</a></li>
+      </ul>
+      <span class="open-menu"><i class="fas fa-bars"></i></span>
+    </nav>
+  </header>
+  <aside class="docs-menu hidden closed">
+    <h1 class="docs-menu-title">ue-scroll.js</h1>
+    <ul>
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#options">Options</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+  </aside>
+  <main class="docs">
+    <span id="getting-started" class="page-anchor"></span>
+    <div class="page">
+      <div class="column">
+        <h2 class="docs-title">Getting Started</h2>
+        <div class="docs-paragraph">
+          <h3 class="docs-sub-title">Install by npm (recommended)</h3>
+          <pre class="sample"><code>$ npm install ue-scroll-js --save</code></pre>
+          <h3 class="docs-sub-title">or Yarn</h3>
+          <pre class="sample"><code>$ yarn add ue-scroll-js</code></pre>
+        </div>
+        <div class="docs-paragraph">
+          <h3 class="docs-sub-title">Using CDN</h3>
+          <pre class="sample"><code>&lt;script src="https://unpkg.com/ue-scroll-js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <div class="docs-paragraph">
+          <h3 class="docs-sub-title">Basic Usage</h3>
+          <pre class="sample"><code class="comment">&lt;html&gt;
+  &lt;head&gt;
+    <span class="white">&lt;!-- Read CSS and JS --&gt;
+    &lt;link rel="stylesheet" href="/path/to/ue-scroll-js/dist/ue-scroll.min.css"&gt;
+    &lt;script src="/path/to/ue-scroll-js/dist/ue-scroll.min.js"&gt;&lt;/script&gt;</span>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      Your main contents
+    &lt;/main&gt;
+    <span class="white">&lt;!-- Run this script --&gt;
+    &lt;div id="ue-scroll" class="ue-scroll btn-white arrow-black circle shadow"&gt;&lt;/div&gt;
+    &lt;script&gt;
+      UeScroll.init();
+    &lt;/script&gt;</span>
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          <h3 class="docs-sub-title">or Set initial options</h3>
+          <pre class="sample"><code>&lt;!-- Run this script --&gt;
+&lt;div id="my-custom-id" class="ue-scroll btn-white arrow-black circle shadow"&gt;&lt;/div&gt;
+&lt;script&gt;
+  UeScroll.init({
+    element: '#my-custom-id',
+    scrollSpeed: 10
+  });
+&lt;/script&gt;
+</code></pre>
+        </div>
+        <div class="docs-paragraph">
+          <h3 class="docs-sub-title">Use on es6 modules</h3>
+          <pre class="sample"><code>'use strict';
+import ue from 'ue-scroll-js';
+// Run this script
+ue.init();
+</code></pre>
+          <p class="note">By the default, ue-scroll.js automatically detect element having '#ue-scroll'. It needs to be started after DOM is rendered.</p>
+        </div>
+      </div>
+    </div>
+    <span id="options" class="page-anchor"></span>
+    <div class="page">
+      <div class="column">
+        <h2 class="docs-title">Options</h2>
+        <div class="docs-paragraph options-wrap">
+          <table class="options">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Default Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>element</td>
+                <td>'#ue-scroll'</td>
+                <td>Specify an element with a CSS selector.</td>
+              </tr>
+              <tr>
+                <td>position</td>
+                <td>200</td>
+                <td>Specify the scroll position where the button is displayed.</td>
+              </tr>
+              <tr>
+                <td>scrollSpeed</td>
+                <td>10</td>
+                <td>Specify the speed of scrolling (Recommend 20 or less)</td>
+              </tr>
+              <tr>
+                <td>fadeSpeed</td>
+                <td>10</td>
+                <td>Specify the speed of fade (Recommend 20 or less)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">In addition, You can freely change the color, design, position etc of buttons with CSS!</p>
+      </div>
+    </div>
+    <span id="examples" class="page-anchor"></span>
+    <div class="page">
+      <div class="column">
+        <h2 class="docs-title">Examples</h2>
+        <div class="docs-paragraph">
+          <h2 class="docs-sub-title">Circle</h2>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-white arrow-black circle"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-white arrow-black circle"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-gray arrow-white circle"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-gray arrow-white circle"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-black arrow-white circle"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-black arrow-white circle"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-white arrow-black circle shadow"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-white arrow-black circle shadow"&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+        <div class="docs-paragraph">
+          <h2 class="docs-sub-title">Rounded Rectangle</h2>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-white arrow-black rounded-rectangle"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-white arrow-black rounded-rectangle"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-gray arrow-white rounded-rectangle"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-gray arrow-white rounded-rectangle"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-black arrow-white rounded-rectangle"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-black arrow-white rounded-rectangle"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-white arrow-black rounded-rectangle shadow"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-white arrow-black rounded-rectangle shadow"&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+        <div class="docs-paragraph">
+          <h2 class="docs-sub-title">Square</h2>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-white arrow-black square"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-white arrow-black square"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-gray arrow-white square"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-gray arrow-white square"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-black arrow-white square"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-black arrow-white square"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll btn-white arrow-black square shadow"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll btn-white arrow-black square shadow"&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+        <div class="docs-paragraph">
+          <h2 class="docs-sub-title">Customize</h2>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll arrow-white circle" style="background-color: #f69;"></div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll arrow-white circle" style="background-color: #f69;"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <div class="flex responsive center examples">
+            <div class="sample-btn">
+              <div class="ue-scroll" style="width: auto; height: auto; padding: 10px; background-color: #fff; border: 1px solid #ccc; border-radius: 50%;">Go!</div>
+            </div>
+            <pre class="sample"><code>&lt;div class="ue-scroll" style="width: auto; height: auto; padding: 10px; background-color: #fff; border: 1px solid #ccc; border-radius: 50%;"&gt;Go!&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer flex responsive center">
+    <div class="license">Released under the MIT License</div>
+    <div class="copyright">Copyright &copy; 2017 azrsix</div>
+  </footer>
+  <div id="ue-scroll" class="ue-scroll btn-white arrow-black circle shadow"></div>
+  <script>
+    UeScroll.init();
+  </script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
