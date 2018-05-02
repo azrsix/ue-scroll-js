@@ -1,19 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
-const MinifyPlugin = require("babel-minify-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MinifyPlugin = require('babel-minify-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('./package.json');
 
 const config = {
   entry: {
     'ue-scroll.min.js': './src/js/ue-scroll.js',
-    'ue-scroll.min.css': './src/css/ue-scroll.css',
+    'ue-scroll.min.css': './src/css/ue-scroll.css'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]',
-    library: "UeScroll",
-    libraryTarget: "umd"
+    library: 'UeScroll',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [{
