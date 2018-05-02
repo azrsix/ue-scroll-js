@@ -53,7 +53,7 @@ const config = {
     new MinifyPlugin(),
     new ExtractTextPlugin('[name]'),
     new webpack.BannerPlugin({
-      banner: `ue-scroll.js v${pkg.version}\n(c) 2017 ${pkg.author}\nReleased under the MIT license`,
+      banner: `ue-scroll.js v${pkg.version}\n(c) 2018 ${pkg.author}\nReleased under the MIT license`,
       exclude: /\.css$/,
     }),
   ]
