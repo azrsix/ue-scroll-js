@@ -1,15 +1,15 @@
-const MinifyPlugin = require("babel-minify-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MinifyPlugin = require('babel-minify-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const contents = ['index', 'docs'];
 
 const config = {
   entry: {
     'js/app.min.js': './src/js/app.js',
-    'css/style.min.css': './src/css/style.css',
+    'css/style.min.css': './src/css/style.css'
   },
   output: {
-    filename: '[name]',
+    filename: '[name]'
   },
   module: {
     rules: [{
@@ -34,6 +34,9 @@ const config = {
           loader: 'postcss-loader'
         }]
       })
+    }, {
+      test: /\.pug$/,
+      loader: 'pug-loader'
     }]
   },
   plugins: [
@@ -42,7 +45,7 @@ const config = {
   ].concat(contents.map((name) => {
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
-      template: `src/${name}.html`,
+      template: `src/${name}.pug`,
       inject: false,
       minify: {
         caseSensitive: true,
@@ -50,8 +53,8 @@ const config = {
         collapseWhitespace: true,
         minifyCSS: true,
         minifyJS: true,
-        removeComments: true,
-      },
+        removeComments: true
+      }
     });
   }))
 };

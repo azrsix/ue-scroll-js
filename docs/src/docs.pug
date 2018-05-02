@@ -1,0 +1,217 @@
+doctype html
+html(lang="en")
+  include includes/head.pug
+  body
+    header.top
+      nav
+        ul.navigation.flex.row
+          li
+            a(href="./") Home
+          li
+            a(href="docs.html") Docs
+          li
+            a(href="https://github.com/azrsix/ue-scroll-js" target="_blank") GitHub
+        span.open-menu
+          i.fas.fa-bars
+    aside.docs-menu.hidden.closed
+      h1.docs-menu-title ue-scroll.js
+      ul
+        li
+          a(href="#getting-started") Getting Started
+        li
+          a(href="#options") Options
+        li
+          a(href="#examples") Examples
+    main.docs
+      span#getting-started.page-anchor
+      .page
+        .column
+          h2.docs-title Getting Started
+          .docs-paragraph
+            h3.docs-sub-title Install by npm (recommended)
+            pre.sample
+              code $ npm install ue-scroll-js --save
+            h3.docs-sub-title or Yarn
+            pre.sample
+              code $ yarn add ue-scroll-js
+          .docs-paragraph
+            h3.docs-sub-title Using CDN
+            pre.sample
+              code &lt;script src="https://unpkg.com/ue-scroll-js"&gt;&lt;/script&gt;
+          .docs-paragraph
+            h3.docs-sub-title Basic Usage
+            pre.sample
+              code.comment
+                | &lt;html&gt;
+                |   &lt;head&gt;
+                |     <span class="white">&lt;!-- Read CSS and JS --&gt;
+                |     &lt;link rel="stylesheet" href="/path/to/ue-scroll-js/dist/ue-scroll.min.css"&gt;
+                |     &lt;script src="/path/to/ue-scroll-js/dist/ue-scroll.min.js"&gt;&lt;/script&gt;</span>
+                |   &lt;/head&gt;
+                |   &lt;body&gt;
+                |     &lt;main&gt;
+                |       Your main contents
+                |     &lt;/main&gt;
+                |     <span class="white">&lt;!-- Run this script --&gt;
+                |     &lt;div id="ue-scroll" class="ue-scroll btn-white arrow-black circle shadow"&gt;&lt;/div&gt;
+                |     &lt;script&gt;
+                |       UeScroll.init();
+                |     &lt;/script&gt;</span>
+                |   &lt;/body&gt;
+                | &lt;/html&gt;
+            h3.docs-sub-title or Set initial options
+            pre.sample
+              code
+                | &lt;!-- Run this script --&gt;
+                | &lt;div id="my-custom-id" class="ue-scroll btn-white arrow-black circle shadow"&gt;&lt;/div&gt;
+                | &lt;script&gt;
+                |   UeScroll.init({
+                |     element: '#my-custom-id',
+                |     scrollSpeed: 10
+                |   });
+                | &lt;/script&gt;
+          .docs-paragraph
+            h3.docs-sub-title Use on es6 modules
+            pre.sample
+              code
+                | 'use strict';
+                | import ue from 'ue-scroll-js';
+                | // Run this script
+                | ue.init();
+            p.note By the default, ue-scroll.js automatically detect element having '#ue-scroll'. It needs to be started after DOM is rendered.
+      span#options.page-anchor
+      .page
+        .column
+          h2.docs-title Options
+          .docs-paragraph.options-wrap
+            table.options
+              thead
+                tr
+                  th Key
+                  th Data Type
+                  th Default Value
+                  th Description
+              tbody
+                tr
+                  td element
+                  td String
+                  td '#ue-scroll'
+                  td Specify an element with a CSS selector.
+                tr
+                  td position
+                  td Number
+                  td 200
+                  td Specify the scroll position where the button is displayed.
+                tr
+                  td scrollSpeed
+                  td Number
+                  td 10
+                  td Specify the speed of scrolling (Recommend 20 or less)
+                tr
+                  td fadeSpeed
+                  td Number
+                  td 10
+                  td Specify the speed of fade (Recommend 20 or less)
+                tr
+                  td cancelByScroll
+                  td Boolean
+                  td true
+                  td Cancel scrolling when scroll down (This setting is ignored on touch devices)
+                tr
+                  td cancelByClick
+                  td Boolean
+                  td true
+                  td Cancel scrolling when window clicking.
+                tr
+                  td cancelByKeydown
+                  td Boolean
+                  td true
+                  td Cancel scrolling when pressed any key.
+          p.note In addition, You can freely change the color, design, position etc of buttons with CSS!
+      span#examples.page-anchor
+      .page
+        .column
+          h2.docs-title Examples
+          .docs-paragraph
+            h2.docs-sub-title Circle
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-white.arrow-black.circle
+              pre.sample
+                code &lt;div class="ue-scroll btn-white arrow-black circle"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-gray.arrow-white.circle
+              pre.sample
+                code &lt;div class="ue-scroll btn-gray arrow-white circle"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-black.arrow-white.circle
+              pre.sample
+                code &lt;div class="ue-scroll btn-black arrow-white circle"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-white.arrow-black.circle.shadow
+              pre.sample
+                code &lt;div class="ue-scroll btn-white arrow-black circle shadow"&gt;&lt;/div&gt;
+          .docs-paragraph
+            h2.docs-sub-title Rounded Rectangle
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-white.arrow-black.rounded-rectangle
+              pre.sample
+                code &lt;div class="ue-scroll btn-white arrow-black rounded-rectangle"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-gray.arrow-white.rounded-rectangle
+              pre.sample
+                code &lt;div class="ue-scroll btn-gray arrow-white rounded-rectangle"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-black.arrow-white.rounded-rectangle
+              pre.sample
+                code &lt;div class="ue-scroll btn-black arrow-white rounded-rectangle"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-white.arrow-black.rounded-rectangle.shadow
+              pre.sample
+                code &lt;div class="ue-scroll btn-white arrow-black rounded-rectangle shadow"&gt;&lt;/div&gt;
+          .docs-paragraph
+            h2.docs-sub-title Square
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-white.arrow-black.square
+              pre.sample
+                code &lt;div class="ue-scroll btn-white arrow-black square"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-gray.arrow-white.square
+              pre.sample
+                code &lt;div class="ue-scroll btn-gray arrow-white square"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-black.arrow-white.square
+              pre.sample
+                code &lt;div class="ue-scroll btn-black arrow-white square"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.btn-white.arrow-black.square.shadow
+              pre.sample
+                code &lt;div class="ue-scroll btn-white arrow-black square shadow"&gt;&lt;/div&gt;
+          .docs-paragraph
+            h2.docs-sub-title Customize
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll.arrow-white.circle(style="background-color: #f69;")
+              pre.sample
+                code &lt;div class="ue-scroll arrow-white circle" style="background-color: #f69;"&gt;&lt;/div&gt;
+            .flex.responsive.center.examples
+              .sample-btn
+                .ue-scroll(style="width: auto; height: auto; padding: 10px; background-color: #fff; border: 1px solid #ccc; border-radius: 50%;") Go!
+              pre.sample
+                code &lt;div class="ue-scroll" style="width: auto; height: auto; padding: 10px; background-color: #fff; border: 1px solid #ccc; border-radius: 50%;"&gt;Go!&lt;/div&gt;
+    include includes/footer.pug
+    #ue-scroll.ue-scroll.btn-white.arrow-black.circle.shadow
+    script.
+      UeScroll.init();
+    script(src="js/app.min.js")

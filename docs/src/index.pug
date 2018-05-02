@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  include includes/head.pug
+  body
+    header.top
+      nav
+        ul.navigation.flex.row
+          li
+            a(href="./") Home
+          li
+            a(href="docs.html") Docs
+          li
+            a(href="https://github.com/azrsix/ue-scroll-js" target="_blank") GitHub
+    main
+      .page
+        .column.center
+          h1.title ue-scroll.js
+          h2.sub-title Lightweight JavaScript library for scroll up
+          pre
+            code $ npm i ue-scroll-js -P
+          .flex.responsive
+            a.btn.grid-50(href="docs.html#getting-started") Getting started
+            a.btn.grid-50(href="docs.html#examples") Examples
+          .description.step1 Have a try scroll down this page!
+          span.try.step1
+      .page
+        .column.center
+      .page
+        .column.center
+          .description.step2 Try to click or tap the button at the bottom right.
+          span.try.step2
+    include includes/footer.pug
+    #ue-scroll.ue-scroll.btn-white.arrow-black.circle.shadow
+    script.
+      UeScroll.init();
+      UeScroll.init({ element: '.try.step2' });
+    script(src="js/app.min.js")
