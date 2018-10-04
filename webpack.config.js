@@ -1,18 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const pkg = require('./package.json');
 
 const config = {
-  entry: {
-    'ue-scroll.min.js': './src/js/ue-scroll.js',
-    'ue-scroll.min.css': './src/css/ue-scroll.css'
-  },
+  mode: 'production',
+  entry: ['./src/css/ue-scroll.css', './src/js/ue-scroll.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]',
+    filename: 'ue-scroll.min.js',
     library: 'UeScroll',
+    libraryExport: 'default',
     libraryTarget: 'umd'
   },
   module: {
@@ -22,22 +21,21 @@ const config = {
       use: [{
         loader: 'babel-loader',
         options: {
-          presets: ['es2015']
+          presets: ['@babel/preset-env']
         }
       }]
     }, {
       test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1
-          }
-        }, {
-          loader: 'postcss-loader'
-        }]
-      })
+      use: [{
+        loader: MiniCssExtractPlugin.loader
+      }, {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1
+        }
+      }, {
+        loader: 'postcss-loader'
+      }]
     }, {
       test: /\.(?:jpe?g|png|gif|svg|ico)(?:\?.+)?$/,
       use: [{
@@ -51,11 +49,13 @@ const config = {
   },
   plugins: [
     new MinifyPlugin(),
-    new ExtractTextPlugin('[name]'),
+    new MiniCssExtractPlugin({
+      filename: 'ue-scroll.min.css'
+    }),
     new webpack.BannerPlugin({
       banner: `ue-scroll.js v${pkg.version}\n(c) 2018 ${pkg.author}\nReleased under the MIT license`,
       exclude: /\.css$/,
-    }),
+    })
   ]
 };
 

@@ -22,6 +22,7 @@ $ yarn add ue-scroll-js
 ### Using CDN
 
 ```
+<link rel="stylesheet" href="//unpkg.com/ue-scroll-js@latest/dist/ue-scroll.min.css">
 <script src="https://unpkg.com/ue-scroll-js"></script>
 ```
 
@@ -60,7 +61,7 @@ $ yarn add ue-scroll-js
 </script>
 ```
 
-### Use on es6 modules
+### Use on ES6 modules
 
 ```
 'use strict';
