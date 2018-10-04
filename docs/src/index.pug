@@ -1,37 +1,45 @@
+- const lang = htmlWebpackPlugin.options.templateVars.lang
+- const path = htmlWebpackPlugin.options.templateVars.relativePath
 doctype html
-html(lang="en")
+html(lang=lang.lang)
   include includes/head.pug
-  body
+  body(class=lang.lang)
     header.top
       nav
         ul.navigation.flex.row
           li
-            a(href="./") Home
+            a(href="./") #{lang.home}
           li
-            a(href="docs.html") Docs
+            a(href="docs.html") #{lang.docs}
           li
-            a(href="https://github.com/azrsix/ue-scroll-js" target="_blank") GitHub
+            a(href="https://github.com/azrsix/ue-scroll-js" target="_blank") #{lang.github}
     main
       .page
         .column.center
-          h1.title ue-scroll.js
-          h2.sub-title Lightweight JavaScript library for scroll up
+          h1.title #{lang.title}
+          h2.sub-title #{lang.subTitle}
           pre
             code $ npm i ue-scroll-js -P
           .flex.responsive
-            a.btn.grid-50(href="docs.html#getting-started") Getting started
-            a.btn.grid-50(href="docs.html#examples") Examples
-          .description.step1 Have a try scroll down this page!
+            a.btn.grid-50(href="docs.html#getting-started") #{lang.gettingStarted}
+            a.btn.grid-50(href="docs.html#examples") #{lang.examples}
+          .languages
+            ul.flex.row.center
+              li
+                a(href=`${path}`) English
+              li
+                a(href=`${path}ja/`) 日本語
+          .description.step1 #{lang.step1}
           span.try.step1
       .page
         .column.center
       .page
         .column.center
-          .description.step2 Try to click or tap the button at the bottom right.
+          .description.step2 #{lang.step2}
           span.try.step2
     include includes/footer.pug
     #ue-scroll.ue-scroll.btn-white.arrow-black.circle.shadow
     script.
       UeScroll.init();
       UeScroll.init({ element: '.try.step2' });
-    script(src="js/app.min.js")
+    script(src=`${path}js/app.min.js`)

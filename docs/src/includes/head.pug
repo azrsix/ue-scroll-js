@@ -1,14 +1,28 @@
+- const lang      = htmlWebpackPlugin.options.templateVars.lang
+- const path      = htmlWebpackPlugin.options.templateVars.relativePath
+- const siteUrl   = htmlWebpackPlugin.options.templateVars.siteUrl
+- const permalink = htmlWebpackPlugin.options.templateVars.permalink
 head
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible" content="IE=edge")
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  meta(name="description" content="Lightweight JavaScript library for scroll up")
-  title ue-scroll.js | Lightweight JavaScript library for scroll up
-  link(rel="icon" href="favicon/favicon.ico")
-  link(rel="icon" href="favicon/favicon-192x192.png" sizes="192x192" type="image/png")
-  link(rel="apple-touch-icon" href="favicon/apple-touch-icon-152x152.png" sizes="152x152")
-  link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:200,300,400|Source+Code+Pro")
+  title #{lang.title} | #{lang.subTitle}
+  meta(name="description" content=lang.subTitle)
+  meta(property="og:title" content=lang.title)
+  meta(property="og:description" content=lang.subTitle)
+  meta(property="og:url" content=permalink)
+  meta(property="og:image" content=`${siteUrl}img/ogp.png`)
+  meta(property="og:type" content="website")
+  meta(property="og:locale" content=lang.locale)
+  meta(name="twitter:card" content="summary")
+  meta(name="twitter:site" content="@azrsix")
+  link(rel="icon" href=`${path}favicon/favicon.ico`)
+  link(rel="icon" href=`${path}favicon/android-chrome-192x192.png` sizes="192x192" type="image/png")
+  link(rel="apple-touch-icon" href=`${path}favicon/apple-touch-icon-152x152.png` sizes="152x152")
+  link(rel="stylesheet" href="//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,700|Source+Code+Pro")
   link(rel="stylesheet" href="//unpkg.com/ue-scroll-js@latest/dist/ue-scroll.min.css")
-  link(rel="stylesheet" href="css/style.min.css")
-  script(defer="defer" src="//use.fontawesome.com/releases/v5.0.8/js/all.js")
+  link(rel="stylesheet" href=`${path}css/style.min.css`)
+  script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
+    crossorigin="anonymous")
   script(src="//unpkg.com/ue-scroll-js")

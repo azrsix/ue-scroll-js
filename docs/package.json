@@ -1,4 +1,8 @@
 {
+  "name": "@azrsix/ue-scroll-js-docs",
+  "description": "Docs for ue-scroll.js",
+  "homepage": "https://azrsix.github.io/ue-scroll-js/",
+  "license": "UNLICENSED",
   "dependencies": {},
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
@@ -8,5 +12,7 @@
   "scripts": {
     "dev": "../node_modules/.bin/webpack --watch",
     "build": "../node_modules/.bin/webpack"
-  }
+  },
+  "author": "azrsix",
+  "private": true
 }
