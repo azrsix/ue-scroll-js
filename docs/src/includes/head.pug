@@ -3,6 +3,12 @@
 - const siteUrl   = htmlWebpackPlugin.options.templateVars.siteUrl
 - const permalink = htmlWebpackPlugin.options.templateVars.permalink
 head
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-127037224-1")
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-127037224-1');
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible" content="IE=edge")
   meta(name="viewport" content="width=device-width, initial-scale=1")
