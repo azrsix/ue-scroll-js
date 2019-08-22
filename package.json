@@ -1,6 +1,6 @@
 {
   "name": "ue-scroll-js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Lightweight JavaScript library for scroll up",
   "keywords": [
     "scroll",
@@ -27,22 +27,22 @@
   "main": "src/js/ue-scroll.js",
   "unpkg": "dist/ue-scroll.min.js",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "babel-minify-webpack-plugin": "^0.3.1",
-    "css-loader": "^1.0.0",
-    "cssnano": "^4.1.4",
-    "file-loader": "^2.0.0",
-    "mini-css-extract-plugin": "^0.4.3",
-    "postcss": "^7.0.5",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss": "^7.0.17",
     "postcss-cssnext": "^3.1.0",
-    "postcss-import": "^12.0.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
-    "style-loader": "^0.23.0",
-    "url-loader": "^1.1.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   },
   "scripts": {
     "dev": "webpack --watch",

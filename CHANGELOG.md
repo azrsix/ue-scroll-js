@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [v2.0.1] - 2019-08-22 [YANKED]
+
+### Security
+
+* Updated "devDependencies" packages (because vulnerability measures)
+* This vulnerability is no impact for ue-scroll-js itself
+
 ## [v2.0.0] - 2018-10-05
 
 ### Changed
@@ -37,7 +44,8 @@
 
 * First released ue-scroll.js
 
-[Unreleased]: https://github.com/azrsix/ue-scroll/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/azrsix/ue-scroll/compare/v2.0.1...HEAD
+[v2.0.1]: https://github.com/azrsix/ue-scroll/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/azrsix/ue-scroll/compare/v1.0.1...v2.0.0
 [v1.0.1]: https://github.com/azrsix/ue-scroll/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/azrsix/ue-scroll/compare/v0.0.1...v1.0.0
