@@ -1,0 +1,43 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "title": "ue-scroll.js",
+  "subTitle": "Lightweight JavaScript library for scroll up",
+  "home": "Home",
+  "docs": "Docs",
+  "github": "GitHub",
+  "gettingStarted": "Getting started",
+  "options" :"Options",
+  "examples": "Examples",
+  "step1": "Have a try scroll down this page!",
+  "step2": "Try to click or tap the button at the bottom right.",
+  "installByNpm": "Install by npm (recommended)",
+  "orYarn": "or Yarn",
+  "usingCdn": "Using CDN",
+  "basicUsage": "Basic Usage",
+  "readCssAndJs": "Read CSS and JS",
+  "runThisScript": "Run this script",
+  "orSetInitialOptions": "or Set initial options",
+  "useOnEs6Modules": "Use on ES6 modules",
+  "key": "Key",
+  "dataType": "Data Type",
+  "defaultValue": "Default Value",
+  "description": "Description",
+  "descriptionOf": {
+    "element": "Specify an element with a CSS selector.",
+    "position": "Specify the scroll position where the button is displayed.",
+    "scrollSpeed": "Specify the speed of scrolling (Recommend 20 or less)",
+    "fadeSpeed": "Specify the speed of fade (Recommend 20 or less)",
+    "cancelByScroll": "Cancel scrolling when scroll down<br>(This setting is ignored on touch devices)",
+    "cancelByClick": "Cancel scrolling when window clicking.",
+    "cancelByKeydown": "Cancel scrolling when pressed any key."
+  },
+  "note": {
+    "byTheDefault": "By the default, ue-scroll.js automatically detect element having '#ue-scroll'. It needs to be started after DOM is rendered.",
+    "inAddition": "In addition, You can freely change the color, design, position etc of buttons with CSS!"
+  },
+  "circle": "Circle",
+  "roundedRectangle": "Rounded Rectangle",
+  "square": "Square",
+  "customize": "Customize"
+}

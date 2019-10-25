@@ -1,0 +1,3 @@
+*.min.js diff=minjs
+*.min.css diff=mincss
+*.html diff=minhtml

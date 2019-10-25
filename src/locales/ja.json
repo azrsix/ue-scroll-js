@@ -1,0 +1,43 @@
+{
+  "lang": "ja",
+  "locale": "ja_JP",
+  "title": "ue-scroll.js",
+  "subTitle": "上に戻るためのボタン",
+  "home": "ホーム",
+  "docs": "文書",
+  "github": "GitHub",
+  "gettingStarted": "始め方",
+  "options" :"オプション",
+  "examples": "使用例",
+  "step1": "このページを下にスクロール！",
+  "step2": "右下のボタンをクリックまたはタップ",
+  "installByNpm": "npmでのインストール（推奨）",
+  "orYarn": "またはYarn",
+  "usingCdn": "CDNを使用する場合",
+  "basicUsage": "基本的な使用法",
+  "readCssAndJs": "CSSとJSの読み込み",
+  "runThisScript": "スクリプトの実行",
+  "orSetInitialOptions": "初期オプションを設定する場合",
+  "useOnEs6Modules": "ES6モジュールでの使用",
+  "key": "キー",
+  "dataType": "データ型",
+  "defaultValue": "初期値",
+  "description": "説明",
+  "descriptionOf": {
+    "element": "対象要素をCSSセレクタで指定します。",
+    "position": "ボタンが表示されるスクロール位置を指定します。",
+    "scrollSpeed": "スクロール速度を指定します（推奨20以下）",
+    "fadeSpeed": "フェードのスピードを指定します（推奨20以下）",
+    "cancelByScroll": "スクロールダウン時にスクロールをキャンセルします<br>（この設定はタッチデバイスでは無視されます）",
+    "cancelByClick": "ウィンドウをクリック時にスクロールをキャンセルします。",
+    "cancelByKeydown": "いずれかのキーを押した時にスクロールをキャンセルします。"
+  },
+  "note": {
+    "byTheDefault": "デフォルトでは、ue-scroll.jsは '＃ue-scroll' を持つ要素を自動的に検出します。DOMがレンダリングされた後に開始する必要があります。",
+    "inAddition": "ボタンの色、デザイン、位置などはCSSで自由に変更できます。"
+  },
+  "circle": "円形",
+  "roundedRectangle": "角丸四角形",
+  "square": "四角形",
+  "customize": "カスタマイズ"
+}
