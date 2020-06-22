@@ -89,14 +89,14 @@ const init = (settings) => {
   if (opts.cancelByClick) {
     w.addEventListener((isTouchDevice) ? 'touchstart' : 'click', (e) => {
       if (e.target !== btn) cancelScrolling();
-    });
+    }, {passive: true});
   }
 
   // Canceling scroll on any keypress
   if (opts.cancelByKeydown) {
     w.addEventListener('keydown', () => {
       cancelScrolling();
-    });
+    }, {passive: true});
   }
 
   // Scroll to top
@@ -119,7 +119,7 @@ const init = (settings) => {
       }, opts.scrollSpeed);
     }
     return false;
-  });
+  }, {passive: true});
 
 };
 
